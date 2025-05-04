@@ -9,6 +9,14 @@ def divisor_de_conta():
             print("Número de pessoas inválido.")
             return
         
+        incluir_taxa = input("Deseja incluir os 10% de taxa de serviço? (s/n): ").strip().lower()
+
+        if incluir_taxa == "s":
+            total_com_taxa = total * 1.10  # adiciona 10%
+            print(f"Total com 10%: R$ {total_com_taxa:.2f}")
+        else:
+            total_com_taxa = total
+
         valor_por_pessoa = total / pessoas
         print(f"Cada pessoa deve pagar: R$ {valor_por_pessoa:.2f}")
 
